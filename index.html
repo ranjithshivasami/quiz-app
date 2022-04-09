@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+
+  <body>
+    <div class="welcome-text text-center">
+      <h3>Quiz App</h3>
+      <p>Please enter you name and Click continue to the Quize!</p>
+      <div class="container participant-container">
+        <form
+          class="form-inline"
+          onsubmit="event.preventDefault();"
+          id="form-participant"
+        >
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              size="50"
+              name="name"
+              placeholder="Enter Name"
+              id="name"
+            />
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-danger">Continue</button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+
+    <div id="question-section" class="container d-none">
+      <div id="question-wrapper">
+        <input type="hidden" name="quesion_id" id="quesion-id" value="" />
+        <h2 id="question"></h2>
+      </div>
+      
+        <form
+          class="form-inline"
+          onsubmit="event.preventDefault();"
+          id="form-participant"
+        >
+          <div class="input-group">
+            <div id="answer-options">
+
+            </div>
+            
+          </div>
+         
+        </form>
+      </div>
+    </div>
+    <div id="backdrop">
+      <div class="text-center loading">
+        <div class="spinner-border" role="status">
+          <div class="loader">Loading...</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
